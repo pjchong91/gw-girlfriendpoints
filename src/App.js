@@ -5,9 +5,12 @@ import AddPoints from './components/AddPoints';
 import PointEvents from './components/PointEvents';
 import Highfives from './components/Highfives';
 import ButtonChangeColor from './components/ButtonChangeColor';
+import Footer from './components/Footer';
 import $ from 'jquery';
 
 class App extends Component {
+
+ 
 
 
   render() {
@@ -17,6 +20,7 @@ class App extends Component {
         <PointEvents />
         <Highfives />
         <ButtonChangeColor />
+        <Footer />
       </div>
     );
   }

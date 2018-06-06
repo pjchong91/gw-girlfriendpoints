@@ -26,6 +26,7 @@ class Highfives extends Component {
             <h1>Highfives</h1>
 
             <button onClick={this.updateButton.bind(this)}>{this.state.clicks}</button>
+            <p>For this section, I would like to graph High 5's over time</p>
         
 
                 

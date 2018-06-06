@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 class ButtonChangeColor extends Component {
-
-    state = {
-        color: 'blue',
-        text: 'Its a great day to be alive'
+    constructor(){
+        super();
+        this.state = {
+            color: 'purple',
+            text: 'Its a great day to be alive'
+        }
+        
     }
+   
 
     buttonChangeColor(){
         this.setState(function(){
@@ -14,14 +18,23 @@ class ButtonChangeColor extends Component {
               color: 'red',
               text: 'Im having a great morning'
           })  
-        }
-           
-               
-                
-           
+        }    
         );
     }
 
+   
+  
+    componentDidMount(){
+        setTimeout( () =>{
+            this.setState({color: 'black'}),
+        100000})
+    }
+
+    componentWillMount(){
+        
+            this.setState({color: 'orange'})
+            
+    }
 
 
     render() {
@@ -32,6 +45,8 @@ class ButtonChangeColor extends Component {
             <button 
             onClick={this.buttonChangeColor.bind(this)}
             style={{color: this.state.color}}>{this.state.text}</button>
+            <p>Eventually I would like to put favourite quotes or funnies here of Beb that make me laugh :)</p>
+            <p>Like a quote shuffle - like QOD </p>
         
 
                 

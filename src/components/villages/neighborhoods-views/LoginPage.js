@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 
 class LoginPage extends Component {
@@ -9,7 +10,9 @@ class LoginPage extends Component {
       return (
         <div className="loginPage">
         <p>I am the login page</p>
-        <button>I will be the login button</button>
+        <Link to = "/featurepage">
+            <p>IM THE LOGIN NOW</p>
+        </Link>
       
         </div>
       );

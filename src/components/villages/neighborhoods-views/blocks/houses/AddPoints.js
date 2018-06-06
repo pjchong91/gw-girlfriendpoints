@@ -3,37 +3,48 @@ import $ from 'jquery';
 
 class AddPoints extends Component {
 
-    // state = {
-    //     points: this.props.points,
-    //     event: this.props.event,
-    //     date: this.props.date
-    // }
+  constructor(){
+    super();
+    this.state = {
+      newPointEvent:{}
+    }
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    console.log('clickclick');
+    this.setState({newPointEvent:{
+        points: this.refs.points.value,
+        event: this.refs.event.value,
+        date: this.refs.date.value
+    }}, function(){
+      this.props.addPointEvent(this.state.newPointEvent)
+    })
 
 
+    }
+  
 
     render() {
       return (
         <div className="addPoints">
             <h1>Girlfriend Points</h1>
-                <form>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <label>Points</label>
-                    <input type="text" ref="points">{this.props.points}</input>
+                    <input type="text" ref="points"/>
                     <br/><br/>
 
                     <label>Event</label>
-                    <input type="text" ref="event">{this.props.event}</input>
+                    <input type="text" ref="event" />
                     <br/><br/>
 
                     <label>Date</label>
-                    <input type="text" ref="date">{this.props.date}</input>
+                    <input type="text" ref="date" />
                     <br/><br/>
 
                     <input type="submit"/>
 
-                </form>
-
-
-                
+                </form> 
         </div>
       );
     }

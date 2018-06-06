@@ -11,7 +11,7 @@ class Footer extends Component {
         <div className="footer">
             <h1>Footer</h1>
         
-            <a className="github-link" href="https://github.com/pjchong91"><i class="fab fa-github"></i> @ P Chong </a>
+            <a className="github-link" href="https://github.com/pjchong91"><i className="fab fa-github"></i> @ P Chong </a>
                 
         </div>
       );

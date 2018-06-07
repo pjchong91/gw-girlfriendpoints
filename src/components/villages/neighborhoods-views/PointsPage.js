@@ -15,24 +15,56 @@ constructor(){
     }
 }
 
+getPointEvents(){
+    this.setState({
+        pointEvents:[
+            {
+                points: 'falala',
+                event: 'lots of events',
+                date: 'arbitrary date'
+            },
+            {
+                points: 'omfg',
+                event: 'whydoesnothing work',
+                date: 'sadsadtiems'
+            }
+           
+        ]
+    })
+          
+    }
+   
+
+
+componentWillMount(){
+this.getPointEvents();
+}
+
+
 handleAddPointEvent(pointEvent){
     let currentPointEvents = this.state.pointEvents;
-    // this.setState(
-    //     currentPointEvents.push[newPointEvent]
-    // )
 
     currentPointEvents.push(pointEvent);
-    console.log(this.state);
+
+   this.setState({pointEvents:currentPointEvents});
+
 }
+
+
+
  
     render() {
+
+        
+      
       return (
+
+        
         <div className="pointsPage">
         <Header />
         <PageTitle title={'Points Page'} subtitle={'Add points and view previous point events here'} />
-        <AddPoints addPointEvent={this.handleAddPointEvent.bind(this)}/>
-        {/* <button onClick={this.handleAddPointEvent.bind(this)}>GRAB THINGS</button> */}
-        <PointEvents />
+        <AddPoints addPointEvent={this.handleAddPointEvent.bind(this)} />
+        <PointEvents allPointEvents = {this.state.pointEvents}/>
         <Footer />
       
         </div>

@@ -12,13 +12,13 @@ class AddPoints extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('clickclick');
     this.setState({newPointEvent:{
         points: this.refs.points.value,
         event: this.refs.event.value,
         date: this.refs.date.value
     }}, function(){
       this.props.addPointEvent(this.state.newPointEvent)
+     
     })
 
 
@@ -26,6 +26,7 @@ class AddPoints extends Component {
   
 
     render() {
+      
       return (
         <div className="addPoints">
             <h1>Girlfriend Points</h1>

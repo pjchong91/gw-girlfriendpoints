@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
+import SingularPointEvent from './SingularPointEvent';
 
 class PointEvents extends Component {
   render() {
+
+  
+      let allPE = this.props.allPointEvents.map(pointEvents =>{
+        return(
+          // 
+          <SingularPointEvent pointEvents={pointEvents} key={pointEvents.event}/>
+            // <SingularPointEvent pointEvent={this.pointEvents} key={this.pointEvents.event}/>
+            // console.log('bananas', pointEvents.event)
+        )
+        
+      })
+    //Take allPointEvents array from PointsPage and map each of the pointEvents
+  
    
     return (
+
+      
       <div className="pointEvents">
 
       
         <h1>Display Events </h1>
-        {/* <li>{this.props.pointEvent.points} - {this.props.pointEvent.event} - {this.props.pointEvent.date}</li> */}
+        <ul>
+        {allPE}
+        </ul>
 
-        <p>With different background colors or icons for cash in vs cash out -- icon might bbetter for A11Y</p>
+        
       </div>
     );
   }

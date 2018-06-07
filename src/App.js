@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import LoginPage from './components/villages/neighborhoods-views/LoginPage';
 import FeaturePage from './components/villages/neighborhoods-views/FeaturePage';

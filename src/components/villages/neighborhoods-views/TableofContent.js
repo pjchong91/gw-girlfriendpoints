@@ -12,6 +12,7 @@ class TableofContent extends Component {
 
  
     render() {
+        // console.log(this.state,'toc');
       return (
         <div className="tableofContent">
         <Header />
@@ -19,13 +20,16 @@ class TableofContent extends Component {
         <Summary />
        
 
-            <Link to = "/featurepage">
+            <Link to ={{
+                pathname: "/featurepage",
+                state: {variableapple: 'wtf'
+                }}}>
                 <p>Feature Page</p>
             </Link>
             <Link to = "/pointspage">
                 <p>Points Page</p>
             </Link>
-
+                
 
         <Footer />
         </div>

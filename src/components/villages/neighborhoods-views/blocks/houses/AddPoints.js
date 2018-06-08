@@ -32,7 +32,7 @@ class AddPoints extends Component {
             <h1>Girlfriend Points</h1>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <label>Points</label>
-                    <input type="text" ref="points"/>
+                    <input type="number" ref="points"/>
                     <br/><br/>
 
                     <label>Event</label>

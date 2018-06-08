@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import SingularPointEvent from './SingularPointEvent';
+import PointTotal from './PointTotal';
 
 class PointEvents extends Component {
   render() {
 
-  
+      //Take allPointEvents array from PointsPage and map each of the pointEvents
       let allPE = this.props.allPointEvents.map(pointEvents =>{
         return(
-          // 
+         
           <SingularPointEvent pointEvents={pointEvents} key={pointEvents.event}/>
-            // <SingularPointEvent pointEvent={this.pointEvents} key={this.pointEvents.event}/>
-            // console.log('bananas', pointEvents.event)
+        
         )
         
       })
-    //Take allPointEvents array from PointsPage and map each of the pointEvents
+
+     
+      
   
    
     return (

@@ -8,7 +8,7 @@ import TableofContent from './components/villages/neighborhoods-views/TableofCon
 import PointsPage from './components/villages/neighborhoods-views/PointsPage';
 import $ from 'jquery';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
+import EventList from './components/containers/eventList';
 class App extends Component {
 
  
@@ -22,6 +22,9 @@ class App extends Component {
             <Route path ="/summary" component={Summary} />
             <Route path = "/tableofcontent" component={TableofContent}/>
             <Route path = "/pointspage" component={PointsPage}/>
+          
+          <EventList />
+          
           </div>
           </Router>
     

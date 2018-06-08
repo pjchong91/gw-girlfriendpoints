@@ -11,7 +11,7 @@ export default function(){
         },  {
             points: 50,
             event: 'Take out the dog',
-            date: 'new Years'
+            date: 'New Years'
         }
     ]
 }

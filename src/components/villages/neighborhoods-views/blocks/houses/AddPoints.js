@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {addPointEventZ} from '../../../../../actions';
 
 class AddPoints extends Component {
 
@@ -12,6 +15,8 @@ class AddPoints extends Component {
 
   handleSubmit(e){
     e.preventDefault();
+    // this.props.addPointEventZ();
+
     this.setState({newPointEvent:{
         points: this.refs.points.value,
         event: this.refs.event.value,
@@ -30,7 +35,7 @@ class AddPoints extends Component {
       return (
         <div className="addPoints">
             <h1>Girlfriend Points</h1>
-                <form onSubmit={this.handleSubmit.bind(this)}>
+                <form onSubmit={this.handleSubmit.bind(this)} >
                     <label>Points</label>
                     <input type="number" ref="points"/>
                     <br/><br/>
@@ -43,12 +48,17 @@ class AddPoints extends Component {
                     <input type="text" ref="date" />
                     <br/><br/>
 
-                    <input type="submit"/>
+                    <input type="submit" />
 
                 </form> 
         </div>
       );
     }
   }
+
+  function matchDispatchToProps(dispatch){
+    return bindActionCreators({addPointEventZ: addPointEventZ}, dispatch)
+}
+
   
   export default AddPoints;

@@ -8,6 +8,7 @@ import PointTotal from './blocks/houses/PointTotal';
 import Footer from './blocks/Footer';
 
 
+
 class PointsPage extends Component {
 constructor(){
     super();
@@ -96,11 +97,6 @@ handleAddPointEvent(pointEvent){
 }
 
 
-
-
-
-
-
  
     render() {
 
@@ -121,6 +117,7 @@ handleAddPointEvent(pointEvent){
       );
     }
   }
-  
+
+ 
   export default PointsPage;
   

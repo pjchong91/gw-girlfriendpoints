@@ -14,9 +14,9 @@ class PointTotal extends Component {
       return (
         <div className="PointTotal">
         
-<p>You currently have:</p>
+          <p>You currently have:</p>
        
-        <p>{this.props.pointSum} POINTS</p>
+          <p>{this.props.pointSum} POINTS</p>
       
         </div>
       );

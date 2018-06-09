@@ -44,7 +44,7 @@ class AddPoints extends Component {
                     <br/><br/>
 
                     <label>Date</label>
-                    <input type="text" ref="date" />
+                    <input type="date" ref="date" />
                     <br/><br/>
 
                     <input type="submit" />

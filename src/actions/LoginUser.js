@@ -1,8 +1,8 @@
-export const LoginUser = (users) => {
-    
-    console.log('Clicked Login!!');
+export const LoginUser = (username) => {
+    console.log(username, ' is now logged in');
     return {
         type: "LOGIN_USER",
-        payload: users
+        payload: username
     }
 }
+

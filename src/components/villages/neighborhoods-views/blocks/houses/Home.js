@@ -1,7 +1,7 @@
 //This icon will guie people back to the main page[Tableof Content]
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import $ from 'jquery';
+
 
 
         

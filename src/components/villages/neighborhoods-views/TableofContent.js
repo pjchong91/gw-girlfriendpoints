@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Summary from './Summary';
-import Header from './blocks/Header';
+// import Header from './blocks/Header';
 import PageTitle from './blocks/houses/PageTitle';
 import Footer from './blocks/Footer';
 
@@ -15,7 +15,7 @@ class TableofContent extends Component {
         // console.log(this.state,'toc');
       return (
         <div className="tableofContent">
-        <Header />
+        {/* <Header /> */}
         
         <Summary />
        

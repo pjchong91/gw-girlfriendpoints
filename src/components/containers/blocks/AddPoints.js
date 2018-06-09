@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {addPointEventZ} from '../../../../../actions';
+// import {addPointEventZ} from '../../../../../actions';
 
 class AddPoints extends Component {
 
@@ -56,9 +55,9 @@ class AddPoints extends Component {
     }
   }
 
-  function matchDispatchToProps(dispatch){
-    return bindActionCreators({addPointEventZ: addPointEventZ}, dispatch)
-}
+//   function matchDispatchToProps(dispatch){
+//     return bindActionCreators({addPointEventZ: addPointEventZ}, dispatch)
+// }
 
   
   export default AddPoints;

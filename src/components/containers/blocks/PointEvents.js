@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SingularPointEvent from './SingularPointEvent';
-import PointTotal from './PointTotal';
 
 class PointEvents extends Component {
   render() {
@@ -15,22 +14,14 @@ class PointEvents extends Component {
         
       })
 
-     
-      
-  
-   
     return (
-
-      
       <div className="pointEvents">
-
       
         <h1>Display Events </h1>
         <ul>
-        {allPE}
+          {allPE}
         </ul>
-
-        
+  
       </div>
     );
   }
